@@ -3,14 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
-
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
+  --color-positive: var(--positive);
+  --color-positive-foreground: var(--positive-foreground);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -25,7 +25,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
+  --color-negative: var(--negative);
+  --color-negative-foreground: var(--negative-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -42,6 +43,11 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-esportes: var(--esportes);
+  --color-crypto: var(--crypto);
+  --color-política: var(--política);
+  --color-mentions: var(--mentions);
+  --color-cultura: var(--cultura);
 }
 
 :root {
@@ -56,15 +62,15 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
-  --primary: oklch(0.6629 0.1602 152.37);
-  --primary-foreground: oklch(1 0 0);
+  --positive: oklch(0.6629 0.1602 152.37);
+  --positive-foreground: oklch(1 0 0);
+  --negative: oklch(0.899 0.0313 20.2);
+  --negative-foreground: oklch(0.577 0.245 27.325);
 
-  --muted: oklch(0.97 0 0);
+  --muted: oklch(0.9672 0 0);
   --muted-foreground: oklch(0.7636 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.899 0.0313 20.2);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
 
   --border: oklch(0.9642 0 0);
   --input: oklch(1 0 0);
@@ -87,7 +93,7 @@
 
   --esportes: oklch(65.5% 0.16 150);
   --crypto: oklch(52% 0.22 288);
-  --politica: oklch(39% 0.1 250);
+  --política: oklch(39% 0.1 250);
   --mentions: oklch(71% 0.12 200);
   --cultura: oklch(70% 0.17 50);
 }
@@ -107,7 +113,7 @@
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
+  --negative: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
