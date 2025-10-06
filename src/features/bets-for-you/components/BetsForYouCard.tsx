@@ -12,6 +12,7 @@ import IndicatorLine from "../../../components/IndicatorLine";
 import { formatPercentage } from "@/lib/formatPercentage";
 import CirclePercentage from "../../../components/CirclePercentage";
 import ButtonsDecision from "../../../components/ButtonsDecision";
+import { toast } from "sonner";
 
 export default function BetsForYouCard({ event }: { event: Bets }) {
   return (
@@ -74,12 +75,22 @@ export default function BetsForYouCard({ event }: { event: Bets }) {
             <Button
               size="sm"
               className="flex-1 rounded-sm bg-positive text-positive-foreground"
+              onClick={() =>
+                toast.success("Botão 'Yes'!", {
+                  description: "Botão está funcional!",
+                })
+              }
             >
               Yes
             </Button>
             <Button
               size="sm"
               className="flex-1 rounded-sm bg-negative text-negative-foreground"
+              onClick={() =>
+                toast.error("Botão 'No'!", {
+                  description: "Botão está funcional!",
+                })
+              }
             >
               No
             </Button>

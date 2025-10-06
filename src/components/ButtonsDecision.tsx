@@ -1,3 +1,4 @@
+import { toast } from "sonner";
 import { Button } from "./ui/button";
 
 interface ButtonsDecisionProps {
@@ -20,6 +21,7 @@ export default function ButtonsDecision({
         className={`h-6 px-5 rounded-sm  ${
           fullWidth ? "flex-1" : ""
         } ${yesClasses}`}
+        onClick={() => toast.success("Botão 'Yes'!", { description: "Botão está funcional!" })}
       >
         Yes
       </Button>
@@ -27,6 +29,7 @@ export default function ButtonsDecision({
         className={`h-6 px-5 rounded-sm  ${
           fullWidth ? "flex-1" : ""
         } ${noClasses}`}
+        onClick={() => toast.error("Botão 'No'!", { description: "Botão está funcional!" })}
       >
         No
       </Button>
